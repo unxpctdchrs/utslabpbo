@@ -16,6 +16,7 @@ public class Main {
             System.out.println("1. Register");
             System.out.println("2. Transfer");
             System.out.println("3. Deposit");
+            System.out.println("4. Show Accounts");
             System.out.println("==============================================");
             System.out.print(": ");
 
@@ -101,6 +102,12 @@ public class Main {
                     float amount = scn.nextFloat();
 
                     newbank.deposit(originAcc, amount);
+                }
+                else if (choice == 4){
+                    clearScreen();
+                    newbank.getData();
+                    System.out.print(": ");
+                    String x = scn.next();
                 }
             } catch (Exception e){
                 clearScreen();
